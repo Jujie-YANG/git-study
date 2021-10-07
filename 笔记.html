@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笔记</title>
+
+    <!-- 外部类型表 -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!--权重从小到大排序-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 0000 */
+        body {
+            /* background: color url() repeat attachment position (url repeat needed)*/
+            background: transparent url(images/firstpage_bg1.jpg) repeat fixed top;
+            background-size: cover;
+
+            /* border 没有顺序(width style color) */
+            border: 5px dashed blue;
+            border-top-color: blueviolet;
+
+            /* font: font-style font-weight font-size/line-height font-family (size family needed) */
+            font: normal 400 16px/1.5 'Times New Roman', Times, serif;
+        }
+
+        /* 0001, 0001, 0001 */
+        table,
+        td,
+        th {
+            border: 2px solid blueviolet;
+            border-collapse: collapse;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* 0001 */
+        /* 转换成行内块元素 */
+        span {
+            display: inline-block;
+            height: 30px;
+            width: 10em;
+            background-color: salmon;
+            /* padding-left: 10px; */
+        }
+
+        /* 0001 */
+        /* 未访问过的链接 */
+        a {
+            display: block;
+            color: rgb(45, 67, 133);
+            text-decoration: none;
+            line-height: 30px;
+
+        }
+
+
+        /* 去掉小圆点 （先写） */
+        li {
+            list-style: none;
+        }
+
+        /* 0002 */
+        ul li {
+            color: brown;
+        }
+
+        /* 0010 */
+        .book {
+            width: 500px;
+        }
+
+        /* 0010 */
+        /* 父级 */
+        .nav {
+            height: 40px;
+            line-height: 40px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid rgb(243, 200, 135);
+            background-color: #fff;
+            /* 让块级的盒子水平居中对齐margin:左右auto */
+            margin: 0 auto;
+            width: 1000px;
+            /* inline or inline-block 给父元素添加 text-align: center (span之类的)*/
+            text-align: center;
+        }
+
+        /* 0011 */
+        .nav a {
+            display: inline-block;
+            padding: 0 30px;
+            color: #4c4c4c;
+            font-size: 18px;
+        }
+
+        /* 0011 */
+        /* 鼠标经过的链接 */
+        a:hover {
+            background-color: #eee;
+            color: rgb(32, 68, 175);
+            /* line-height: 30px; */
+            /* padding: 0, 1em; */
+            /* display: inline-block; */
+            /* height: 50px; */
+            /* display: block; */
+        }
+
+        /* 0010(伪类)+0001=0011 */
+        /* 已访问过的链接 -用不着*/
+        /* a:visited {
+            color: orange;
+        } */
+        /* 0011 */
+        /* 鼠标正在按下的链接 */
+        /* a:active {
+            background-color: rgb(97, 139, 216);
+        } */
+
+        /* 0001, 0011 */
+        input,
+        textarea:focus {
+
+            background-color: rgb(249, 249, 250);
+
+        }
+
+        /* 0010 */
+        .paper {
+            /* 解决父子嵌套塌陷：1父元素加border:1px solid transparent 2父元素加内边距
+            padding:1px 3父元素加overflow:hidden(这个不会change父元素的大小)
+            -还有 浮动，固定，绝对定位 的盒子也不会有塌陷问题 */
+            overflow: hidden;
+            background-color: rgb(113, 197, 113);
+
+        }
+
+        /* 0010 */
+        .paragraph {
+            width: 400px;
+            margin: 20px 30px;
+            background-color: #fff;
+            padding: 1.5em 2.5em;
+            text-indent: 2em;
+        }
+
+        .border-radius {
+            /* 圆角矩形，radius为高度的一半 */
+            height: 100px;
+            /* border-radius: 50%; */
+            width: 300px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <ul>
+            <li><a href="#">1.人物备忘录</a></li>
+            <li><a href="#">2.个人简介</a></li>
+            <li><a href="#">3.音乐</a></li>
+            <li><a href="#">4.舞蹈</a></li>
+            <li><a href="#">5.添加微信</a></li>
+            <!-- <div class="border-radius">敬请期待</div> -->
+        </ul>
+
+    </div>
+
+
+    <h1> <em> 18 years old </em></h1>
+
+
+
+    <h3 id="menu">目录</h3>
+    <span><a href="#人物回忆录">1.人物回忆录</a></span>
+    <br>
+
+
+    <span><a href="#加微信">5.加微信</a></span>
+
+    <div class="paper">
+        <div class="paragraph">
+            <h3>“独”</h3>
+            <p>“独”挺有趣，从小就“独”，出生到现在仍为独生子，家里吧从小也是就我一个人的感觉，爸妈上班，像人们口中爷爷奶奶带大的孩子，但其实客观来说，父母陪的时间也不算少的了，至于经常看到如何为人父母的书或是网络忠告，说什么要放下手机多陪孩子，培养孩子的创造力啥的，稍微有点站着说话不腰疼。虽然似乎在青少年时期，有过一段时间是不知道为啥看不惯父母总拿手机，但童年印象里并没有类似的回忆，所以单从这方面看，初为人夫初为人母的我爸妈，别说勉强及格吧，我可以单方面授予个优秀哈。
+            </p>
+
+            <p>小时候，关家里吧，根本就没跟什么同学出去玩儿过。唯一一次记忆就是跟当年小学经常一起玩儿的一个同学，白白净净的，和我在我家对面的小区的破篮球小半场里玩玩篮球，对于这件事，似乎当时我的感受竟然是他怎么这么勇敢，大晚上敢离家这么远，跑到我对面小区里的这个阴森森的野生半场打篮球，胆儿也太大了吧也。对这位小学同学的印象除了篮球，好像只剩下他在做课间操的时候，好像因为跟人打赌还是什么原因，在大庭广众之下唰的一下直接褪去下体的两层遮羞布，此时让我想起sex
+                education里的Adam，站在食堂桌上，当众脱裤子的情景，极为相似。小学的时候，好像就因为这个事情，周围同学们看他的目光就是感觉他脑子有病。</p>
+
+            <p>我也不担心什么心理学的近因效应，俗话说那些不经意想起的，总是记忆里最深刻的。就像如果此时再问我后不后悔没写日记的习惯，现在想朝花夕拾都不知道发生了什么，我还是不后悔，让我遗忘的东西就让他自然遗忘罢，何必强求自己记那么多东西，该刻写在潜意识里的都刻写进记忆里了，其它的就任之随风而去罢。
+            </p>
+        </div>
+    </div>
+
+
+    <img src="images/高三.jpg" alt="saltburn" title="Aaron took for me" width="300">
+
+
+    <h4 id="人物回忆录">人物回忆录</h4>
+    <p>
+        <a href="人物回忆录.html" target="_blank">人物回忆录</a>
+    </p>
+
+
+
+
+
+
+
+    <!-- table标签 -->
+    <table align="left" border="1" cellpadding="20" cellspacing="0" width="300">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="#">liuliuliu</a></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <br>
+    <ul>
+
+        <li>only list</li>
+        <li>binglie</li>
+        <li>no paragraph</li>
+    </ul>
+
+    <!-- 服务器编程 form标签 -->
+    <form action=".php" method="GET">
+        <table border="1" cellspacing="0.1">
+            <tr>
+                <td>Any comment: </td>
+                <td>
+                    <textarea name="??" id="" cols="30" rows="10" placeholder="(Could I know who you
+                    are? &lt;3)"></textarea>
+                </td>
+                <br>
+            </tr>
+
+            <tr>
+                <td>gender: </td>
+                <td>
+                    <input type="radio" name="gender" id="gender1"><label for="gender1"><img src="images/nan.jpg" alt=""
+                            width="15"> Male</label>
+                    <input type="radio" name="gender" id="gender2"><label for="gender2">Female</label>
+                    <input type="radio" name="gender" id="gender3"> <label for="gender3">Trans</label>
+                    <input type="radio" name="gender" id="gender4"> <label for="gender4"> Have a guess~ </label>
+                </td>
+                <br>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="reset" value="一键清空">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td>
+                    <!-- name=xxx -->
+                    <input type="submit" value="提交">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- 后期结合Js使用 -->
+                    <input type="button" value="获得一句此时此刻属于你的优美句子~">
+                    <input type="file" value="美图共欣赏 疑义相与析">
+                    <select name="" id="">
+                        <option value="">-请选择-</option>
+                        <option value="">没想好</option>
+                    </select>
+                </td>
+            </tr>
+
+
+
+        </table>
+
+    </form>
+
+    <!-- label标签 -->
+    <label for=""></label>
+
+
+
+
+
+
+    <!-- 放最后     -->
+    <h4 id="加微信">加微信</h4>
+    <a href="images/my_QR_code.jpg" target="_blank">欢迎扫描我的微信二维码</a> <a href="#nav"> <br>
+        返回顶部</a>
+
+
+
+
+    <p>作者：杨居杰<br>
+        <strong>29/07/2021</strong>
+    </p>
+</body>
+
+</html>

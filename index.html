@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style>
+        button {
+            width: 200px;
+            height: 50px;
+        }
+
+        div {
+            float: left;
+            width: 150px;
+            height: 80px;
+            background-color: #fdd;
+            border: 1px solid rebeccapurple;
+
+        }
+
+        img {
+            /* position: absolute; */
+            width: 100px;
+            height: 50px;
+        }
+
+        li a {
+            float: right;
+        }
+
+        .change {
+            background-color: antiquewhite;
+            color: aquamarine;
+            font-size: 25px;
+
+
+        }
+
+        .i {
+            color: chocolate;
+        }
+    </style>
+
+    <!-- 引入js文件 -->
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <img src="images/logo.png" alt="">
+    <ul class="clearfix">
+        <li style="display: none;"><a href="">sdfs</a></li>
+        <li><a href="">sdfs</a></li>
+        <li><a href="">sdfs</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+
+    <div id="time" , class="footer">2021-8-9</div>
+
+    <button>Show countDown(time) to 24:00</button>
+    <button class="begin">setInterval</button>
+    <button class="stop">clearInterval</button>
+    <button class="btn">缓动动画添加回调函数</button>
+
+    <div id="timeleft"> The time left:</div>
+    <div class="hour">hours</div>
+    <div class="minute">minutes</div>
+    <div class="second">ceconds</div>
+    <i>Above is the left time</i>
+
+
+
+
+
+
+
+</body>
+
+</html>

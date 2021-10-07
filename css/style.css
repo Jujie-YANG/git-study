@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+/* ul 没加高度，多个li浮动，但不知道li有多少个，要清除浮动加在ul(父元素上) */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  /* 因为插入的是一前一后 块级元素 为了在一行里面 相当于table */
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+s li {
+  list-style: none;
+}
+
+ul li {
+  float: left;
+  height: 100px;
+  width: 200px;
+  background-color: #bbb;
+  margin-right: 20px;
+}

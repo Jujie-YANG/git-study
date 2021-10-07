@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>围棋</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font: font-style font-weight font-size/line-height font-family (size family needed) */
+            font: normal 400 16px/1.5 'Times New Roman', Times, serif;
+        }
+
+        .box {
+            width: 1200px;
+            height: 460px;
+            background-color: silver;
+            /* 居中对齐 */
+            margin: 0 auto;
+        }
+
+        .box>div {
+            /* .box .images { */
+            width: 200px;
+            height: 370px;
+            background-color: pink;
+            margin: 30px;
+            border-radius: 10px;
+            /* box-shadow: h-shodow v-shadow blur(虚实程度) spread(大小) color (inset); */
+            box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, .3);
+            float: left;
+
+
+        }
+
+        .images:hover {
+            /* box-shadow: h-shodow v-shadow blur(虚实程度) spread(大小) color (inset); */
+            box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, .3);
+        }
+
+        .images img {
+            /* 图片的宽度和父亲一样宽 */
+            width: 100%;
+        }
+
+        .caption {
+            height: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            /* 因为这个段落没有width属性 所以padding不会撑开盒子的宽度 */
+            margin-bottom: 10px;
+            /* text-shadow: h-shadow v-shadow blur color; */
+            text-shadow: 3px 3px -1px rgba(0, 0, 0, .3);
+        }
+
+        .year {
+            float: left;
+            height: 30px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #b0b0b0;
+        }
+
+        .images1 {
+            float: left;
+        }
+
+        .images2 {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="images images1">
+            <img src="围棋/合纵人寿杯-第二名.jpg" alt="">
+            <p class="caption">合纵人寿杯——第二名</p>
+            <p class="year">2012</p>
+
+        </div>
+        <div class="images images2">
+            <img src="围棋/运通电脑杯-第一名.jpg" alt="">
+            <p class="caption">运通电脑杯——第一名</p>
+            <p class="year">2015</p>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
